@@ -1,7 +1,7 @@
 /*------------ Required Customizations ------------*/
-const siteName = "SITE NAME";
-const siteDescription = "SITE DESCRIPTION";
-const siteAuthor = "AUTHOR";
+const siteName = "Cyrillic Letter Test";
+const siteDescription = "Presents a random Cyrillic letter, and plays its associated sound when prompted.";
+const siteAuthor = "@cc0407";
 /*-------------------------------------------------*/
 
 
@@ -92,5 +92,5 @@ module.exports = {
   ],
   
   //Change REPONAME to the name of this repo. Necessary for gh-pages to function
-  pathPrefix: "",
+  pathPrefix: "/cyrillic-test",
 };
