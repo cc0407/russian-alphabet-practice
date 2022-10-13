@@ -1,0 +1,18 @@
+.sampleContent                   { @apply z-10 leading-normal text-lg px-4 mb-12 break-words font-bold }
+@screen 360  {.sampleContent     { @apply text-xl w-84 px-0 }}
+@screen 500  {.sampleContent     { @apply text-xl w-104 }}
+@screen 640  {.sampleContent     { @apply text-2xl w-128 mb-16 }}
+@screen 800  {.sampleContent     { @apply w-[44rem] }}
+@screen 1024 {.sampleContent     { @apply w-192 leading-relaxed }}
+
+.sampleSpacing { @apply mt-12 }
+@screen 640  {.sampleSpacing     { @apply mt-16 }}
+
+
+.sampleTextLink                { @apply underline whitespace-nowrap }
+.sampleTextLink:hover          { @apply text-white bg-lightBlue rounded-1 no-underline }
+
+.sampleTitle                   { @apply text-7 font-bold text-lightBlue mb-2 leading-none }
+@screen 360  {.sampleTitle     { @apply text-3xl }}
+@screen 500  {.sampleTitle     { @apply text-4xl }}
+@screen 640  {.sampleTitle     { @apply text-5xl mb-3 }}

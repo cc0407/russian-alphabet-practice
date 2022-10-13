@@ -1,0 +1,37 @@
+.nav                            { @apply w-full z-50 items-center flex flex-row justify-between text-white }
+
+.nav-height                     { @apply h-16 }
+
+.nav-logo > img                 { @apply text-center }
+.nav-logo                       { @apply w-40 z-50 flex-grow-0 ml-2 mr-4 flex-shrink-0 py-2 object-scale-down }
+@screen 800  {.nav-logo         { @apply flex-shrink-default }}
+@screen 1024 {.nav-logo         { @apply flex-shrink-0 }}
+@screen 1280 {.nav-logo         { @apply ml-6 }}
+@screen 1921 {.nav-logo         { @apply absolute }}
+
+.nav-link-list                  { @apply w-full h-full flex-col mr-0 flex items-center justify-end }
+@screen 800  {.nav-link-list    { @apply flex-row static h-full bg-transparent }}
+@screen 1921 {.nav-link-list    { @apply justify-center max-w-6xl }}
+
+.nav-desktop                    { @apply hidden }
+@screen 800  {.nav-desktop      { @apply flex flex-grow-default max-w-screen-768 }}
+
+.nav-mobile                     { @apply flex flex-col w-64 h-128 align-top z-40 top-0 right-0 absolute flex-grow-default items-end bg-darkBlue }
+@screen 800  {.nav-mobile       { @apply hidden }}
+
+.icon                           { @apply h-20 mr-5 }
+@screen 800  {.icon             { @apply hidden }}
+
+.page-links                     { @apply flex flex-col justify-around flex-grow-default }
+@screen 800  {.page-links       { @apply flex flex-row }}
+
+.button-links                   { @apply flex flex-col h-32 justify-around w-48 text-lg }
+@screen 800  {.button-links     { @apply h-10 flex-row items-center content-around py-10 w-64 pr-2 }}
+@screen 1024 {.button-links     { @apply pr-0 }}
+
+.nav-hybrid-row                 { @apply flex-grow-default flex flex-row justify-end }
+@screen 1921 {.nav-hybrid-row   { @apply justify-center }}
+
+.nav-link-size                  { @apply text-lg }
+@screen 800  { .nav-link-size   { @apply text-base }}
+@screen 1024 { .nav-link-size   { @apply text-lg }}

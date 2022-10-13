@@ -1,0 +1,22 @@
+html                            { @apply font-aileron overflow-x-hidden}
+@screen 1024 {html              { @apply overflow-y-scroll }}
+
+a                               { @apply text-center }
+
+.title                          { @apply text-2xl }
+@screen 360  {.title            { @apply text-2xl }}
+@screen 640  {.title            { @apply text-4xl }}
+@screen 1024 {.title            { @apply text-5xl }}
+
+.subtitle                       { @apply font-light text-lg pb-8  }
+@screen 360  {.subtitle         { @apply text-lg }}
+@screen 640  {.subtitle         { @apply text-xl }}
+@screen 768  {.subtitle         { @apply text-3xl }}
+@screen 1440 {.subtitle         { @apply text-4xl }}
+
+.page-width                     { @apply px-0 max-w-full }
+@screen 360  {.page-width       { @apply px-4 }}
+@screen 640  {.page-width       { @apply px-8 }}
+@screen 1024 {.page-width       { @apply px-16 }}
+@screen 1280 {.page-width       { @apply px-24 }}
+@screen 1440 {.page-width       { @apply px-48 }}

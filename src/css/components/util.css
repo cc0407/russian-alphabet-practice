@@ -1,0 +1,33 @@
+/* purgecss start ignore */
+/* ROUNDEDLINK */
+.roundLinkSmall                         { @apply rounded-2 py-2 px-4 }
+
+.roundLink                              { @apply rounded-2 py-2 px-2 }
+@screen 360  {.roundLink                { @apply px-4 }}
+@screen 1280 {.roundLink                { @apply px-6 }}
+
+.roundLinkLarge                         { @apply rounded-2 py-2 px-4 }
+@screen 640  {.roundLinkLarge           { @apply px-6 }}
+/* purgecss end ignore */
+
+/* CHANGES FROM COLUMN ON MOBILE, TO ROW ON DESKTOP */
+.adjustableRow                          { @apply flex flex-col }
+@screen 1024 {.adjustableRow            { @apply flex flex-row }}
+
+.column                                 { @apply flex flex-col }
+.row                                    { @apply flex flex-row }
+.dark                                   { @apply bg-darkBlue text-white }
+.centered                               { @apply items-center justify-center }
+.smallImg                               { @apply max-w-xs w-3/4 }
+
+/* Switch.tsx */
+.switch                                 { @apply bg-white flex flex-row justify-around items-center w-10/12 py-3 px-4 text-darkBlue text-2xl rounded-16 text-center }
+
+/* ExpandBox.tsx */
+.expandBoxTitle                         { @apply text-white font-bold text-sm }
+@screen 640  {.expandBoxTitle           { @apply text-base}}
+@screen 768  {.expandBoxTitle           { @apply text-lg  }}
+@screen 1024 {.expandBoxTitle           { @apply text-xl }}
+
+.expandBoxPlay                          { @apply items-center justify-center px-2 bg-darkBlue rounded-tr-2 }
+@screen 440  {.expandBoxPlay            { @apply px-4 }}

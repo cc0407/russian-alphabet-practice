@@ -1,0 +1,33 @@
+.lightBoxOverlay                        { @apply w-screen h-screen p-10 fixed top-0 right-0 overflow-x-hidden bg-darkBlue z-60 flex-col justify-center items-center bg-opacity-75 }
+
+.lightBoxDiv                            { @apply z-70 w-full h-full bg-offWhite opacity-100 shadow-halfBigWhite rounded-4 flex flex-col justify-start items-center max-h-160 }
+@screen 800  {.lightBoxDiv              { @apply w-160 h-160 }}
+
+    /* the dark section at the top of the lightbox */
+.lightBoxHeader                         { @apply flex flex-col bg-darkBlue w-full rounded-t-3 }
+@screen 640  {.lightBoxHeader           { @apply h-76 }}
+
+    /* row that contains logos */
+.lightBoxLogos                          { @apply flex flex-row justify-around items-center w-full h-auto flex-wrap flex-grow-default px-10 py-5 }
+@screen 640  {.lightBoxLogos            { @apply p-0 }}
+
+    /* the logo's link / container */
+.lightBoxLogoContainer                  { @apply h-18 object-contain basis-1/2 my-1 }
+@screen 440  {.lightBoxLogoContainer    { @apply h-20 }}
+@screen 500  {.lightBoxLogoContainer    { @apply h-24 }}
+@screen 640  {.lightBoxLogoContainer    { @apply basis-auto my-0 }}
+
+    /* the logo itself */
+.lightBoxLogo                           { @apply w-auto max-w-20 h-full inline-block object-contain }
+@screen 440  {.lightBoxLogo             { @apply max-w-24 }}
+@screen 500  {.lightBoxLogo             { @apply max-w-28 }}
+
+    /* the close icon inside the lightbox */
+.lightBoxClose                          { @apply absolute self-end mr-3 mt-3 h-8 w-8 text-white hover:text-LightGray2 }
+@screen 440  {.lightBoxClose            { @apply mr-5 mt-5 }}
+@screen 640  {.lightBoxClose            { @apply relative }}
+
+    /* the text section of the lightbox */
+.lightBoxText                           { @apply h-full w-full text-4 text-center leading-tight flex flex-col justify-between items-center px-[5%] }
+@screen 440  {.lightBoxText             { @apply text-5 }}
+@screen 640  {.lightBoxText             { @apply text-6 }}

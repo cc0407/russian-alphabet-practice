@@ -1,0 +1,15 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+@layer components {
+    @import "./components/footer.css";
+    @import "./components/index.css";
+    @import "./components/lightbox.css";
+    @import "./components/main.css";
+    @import "./components/nav.css";
+    @import "./components/util.css";
+    /*--- More CSS files go here ---*/
+
+    /*---   End more CSS files   ---*/
+}

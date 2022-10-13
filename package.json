@@ -1,0 +1,60 @@
+{
+  "name": "gatsby-starter-default",
+  "private": true,
+  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "version": "0.1.0",
+  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "dependencies": {
+    "@fontsource/aileron": "^4.5.3",
+    "@types/react-helmet": "^6.1.5",
+    "gatsby": "^4.17.2",
+    "gatsby-cli": "^4.3.0",
+    "gatsby-image": "^3.11.0",
+    "gatsby-plugin-google-gtag": "^4.17.0",
+    "gatsby-plugin-google-tagmanager": "^4.17.0",
+    "gatsby-plugin-manifest": "^4.17.0",
+    "gatsby-plugin-offline": "^5.17.0",
+    "gatsby-plugin-postcss": "^5.17.0",
+    "gatsby-plugin-purgecss": "^6.1.2",
+    "gatsby-plugin-react-helmet": "^5.17.0",
+    "gatsby-plugin-sharp": "^4.17.0",
+    "gatsby-source-filesystem": "^4.17.0",
+    "gatsby-transformer-sharp": "^4.17.0",
+    "prop-types": "^15.7.2",
+    "react": "^17.0.2",
+    "react-animate-on-scroll": "^2.1.5",
+    "react-anime": "^4.1.1",
+    "react-crossfade-image": "^1.2.0",
+    "react-device-detect": "^2.2.2",
+    "react-dom": "^17.0.2",
+    "react-helmet": "^6.1.0",
+    "react-icons": "^4.4.0",
+    "react-switch": "^7.0.0",
+    "shell-quote": "^1.7.3"
+  },
+  "devDependencies": {
+    "gh-pages": "^3.2.3",
+    "prettier": "^2.7.1",
+    "tailwindcss": "^3.1.4"
+  },
+  "keywords": [
+    "gatsby"
+  ],
+  "license": "0BSD",
+  "scripts": {
+    "build": "npm run clean && gatsby build",
+    "develop": "gatsby develop -H 0.0.0.0",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
+    "start": "npm run develop",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean",
+    "deploy": "gatsby build --prefix-paths && gh-pages -d public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+  },
+  "bugs": {
+    "url": "https://github.com/gatsbyjs/gatsby/issues"
+  }
+}
