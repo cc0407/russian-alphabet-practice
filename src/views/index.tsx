@@ -1,8 +1,12 @@
 import React, { useState } from "react";
-import Nav from "../components/Nav";
-import Footer from "../components/Footer";
 import Head from "../components/Head";
-import ImageSwap from "../components/ImageSwap";
+// @ts-ignore
+import bruh from "../audio/Bruh.mp3" ;
+// @ts-ignore
+import mining from "../audio/IM MINING.mp3" ;
+// @ts-ignore
+import yeah from "../audio/Yeahh Boy.mp3" ;
+
 
 // This is a high-level view of what the page will be
 export const SamplePage = () => {
@@ -31,23 +35,28 @@ const defaultProps: Partial<props> = {};
 
 const Sample: React.FC<props> = () => {
   const [letter, setLetter] = useState(getRandomLetter());
-  console.log(letter);
+  const [playAudio, setPlayAudio] = useState(false);
+
   return (
-    <div className="w-3/4 h-screen bg-white overflow-hidden column centered">
-      <div className="text-56 h-108 w-128 flex centered bg-main text-white rounded-2">
-        {letter.letter}
-      </div>
-
-      <div className="h-12 text-8 my-4">
-        {letter.sound}
-      </div>
-
-      <div className="row">
-        <div className="button">
-          Play Sound
+    <div className="w-3/4 h-screen bg-white overflow-hidden">
+      <div className="column centered h-full w-3/4 max-w-[550px] mx-auto">
+        <div className="text-56 h-108 flex centered bg-main text-white rounded-2 w-full">
+          {letter.letter}
         </div>
-        <div className="button" onClick={() => {setLetter(getRandomLetter);}}>
-          Next Letter
+
+        {playAudio 
+        ? <audio autoPlay={true} className="h-12 text-8 my-4" onEnded={() => {setPlayAudio(false);}}>
+            <source src={letter.sound} type="audio/mpeg"/>
+          </audio>
+        : ''}
+
+        <div className="row justify-between my-12 w-full">
+          <div className="button mr-4" onClick={() => {setPlayAudio(true);}}>
+            { !playAudio ? "Play Sound" : "Playing..." }
+          </div>
+          <div className="button ml-4" onClick={() => {setLetter(getRandomLetter);}}>
+            Next Letter
+          </div>
         </div>
       </div>
       
@@ -60,39 +69,39 @@ interface dictEntry {
   sound: string,
 }
 const dictionary:dictEntry[] = [
-    {letter:'Аа', sound:'aaa'},
-    {letter:'Бб', sound:'aaa'},
-    {letter:'Вв', sound:'aaa'},
-    {letter:'Гг', sound:'aaa'},
-    {letter:'Дд', sound:'aaa'},
-    {letter:'Ее', sound:'aaa'},
-    {letter:'Ёё', sound:'aaa'},
-    {letter:'Жж', sound:'aaa'},
-    {letter:'Зз', sound:'aaa'},
-    {letter:'Ии', sound:'aaa'},
-    {letter:'Йй', sound:'aaa'},
-    {letter:'Кк', sound:'aaa'},
-    {letter:'Лл', sound:'aaa'},
-    {letter:'Мм', sound:'aaa'},
-    {letter:'Нн', sound:'aaa'},
-    {letter:'Оо', sound:'aaa'},
-    {letter:'Пп', sound:'aaa'},
-    {letter:'Рр', sound:'aaa'},
-    {letter:'Сс', sound:'aaa'},
-    {letter:'Тт', sound:'aaa'},
-    {letter:'Уу', sound:'aaa'},
-    {letter:'Фф', sound:'aaa'},
-    {letter:'Хх', sound:'aaa'},
-    {letter:'Цц', sound:'aaa'},
-    {letter:'Чч', sound:'aaa'},
-    {letter:'Шш', sound:'aaa'},
-    {letter:'Щщ', sound:'aaa'},
-    {letter:'Ъъ', sound:'aaa'},
-    {letter:'Ыы', sound:'aaa'},
-    {letter:'Ьь', sound:'aaa'},
-    {letter:'Ээ', sound:'aaa'},
-    {letter:'Юю', sound:'aaa'},
-    {letter:'Яя', sound:'aaa'},
+    {letter:'Аа', sound:mining},
+    {letter:'Бб', sound:mining},
+    {letter:'Вв', sound:mining},
+    {letter:'Гг', sound:mining},
+    {letter:'Дд', sound:mining},
+    {letter:'Ее', sound:mining},
+    {letter:'Ёё', sound:mining},
+    {letter:'Жж', sound:mining},
+    {letter:'Зз', sound:mining},
+    {letter:'Ии', sound:yeah},
+    {letter:'Йй', sound:yeah},
+    {letter:'Кк', sound:yeah},
+    {letter:'Лл', sound:yeah},
+    {letter:'Мм', sound:yeah},
+    {letter:'Нн', sound:yeah},
+    {letter:'Оо', sound:yeah},
+    {letter:'Пп', sound:yeah},
+    {letter:'Рр', sound:yeah},
+    {letter:'Сс', sound:bruh},
+    {letter:'Тт', sound:bruh},
+    {letter:'Уу', sound:bruh},
+    {letter:'Фф', sound:bruh},
+    {letter:'Хх', sound:bruh},
+    {letter:'Цц', sound:bruh},
+    {letter:'Чч', sound:bruh},
+    {letter:'Шш', sound:bruh},
+    {letter:'Щщ', sound:bruh},
+    {letter:'Ъъ', sound:bruh},
+    {letter:'Ыы', sound:bruh},
+    {letter:'Ьь', sound:bruh},
+    {letter:'Ээ', sound:bruh},
+    {letter:'Юю', sound:bruh},
+    {letter:'Яя', sound:bruh},
   ];
 
 Sample.defaultProps = defaultProps;

@@ -12,6 +12,6 @@
 .sampleTextLink                { @apply underline whitespace-nowrap }
 .sampleTextLink:hover          { @apply text-white bg-lightBlue rounded-1 no-underline }
 
-.button                         { @apply text-10 bg-darkBlue px-6 py-2 rounded-4 text-offWhite mx-4 cursor-pointer select-none }
+.button                         { @apply w-64 text-center text-10 bg-darkBlue px-6 py-2 rounded-4 text-offWhite cursor-pointer select-none }
 .button:hover                   { @apply bg-darkBlue2 bg-opacity-90 text-white }
-.button:active                   { @apply bg-opacity-80 text-white }
+.button:active                  { @apply bg-opacity-80 text-white }
