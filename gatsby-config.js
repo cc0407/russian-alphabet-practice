@@ -1,6 +1,6 @@
 /*------------ Required Customizations ------------*/
-const siteName = "Cyrillic Letter Test";
-const siteDescription = "Presents a random Cyrillic letter, and plays its associated sound when prompted.";
+const siteName = "Russian Alphabet Test";
+const siteDescription = "Presents a random Russian Cyrillic letter, and plays its associated sound when prompted.";
 const siteAuthor = "@cc0407";
 /*-------------------------------------------------*/
 
