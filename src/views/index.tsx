@@ -44,19 +44,22 @@ const Sample: React.FC<props> = () => {
           {letter.letter}
         </div>
 
-        {playAudio 
+        {playAudio // Plays audio if playAudio is set to true, sets it to false once finished playing
         ? <audio autoPlay={true} className="h-12 text-8 my-4" onEnded={() => {setPlayAudio(false);}}>
             <source src={letter.sound} type="audio/mpeg"/>
           </audio>
         : ''}
-
+        
         <div className="row justify-between my-12 w-full">
-          <div className="button mr-4" onClick={() => {setPlayAudio(true);}}>
+          <div className={`flex-grow-default ` + (playAudio ? `playingButton` : `button`)} onClick={() => {setPlayAudio(true);}}>
             { !playAudio ? "Play Sound" : "Playing..." }
           </div>
-          <div className="button ml-4" onClick={() => {setLetter(getRandomLetter);}}>
-            Next Letter
-          </div>
+          {playAudio 
+            ? '' 
+            : <div className="button ml-8" onClick={() => {setLetter(getRandomLetter);}}>
+                Next Letter
+              </div>
+          }
         </div>
       </div>
       
