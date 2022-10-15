@@ -22,3 +22,7 @@ require("./src/css/components/util.css");
 /*--- Custom Fonts can be placed here ---*/
 require("@fontsource/aileron");
 /*---------------------------------------*/
+
+/*------------- Audio Files -------------*/
+/*---------------------------------------*/
+
