@@ -1,3 +1,4 @@
+import { Link } from "gatsby";
 import React, { useEffect, useState } from "react";
 import Head from "../components/Head";
 
@@ -32,12 +33,13 @@ const Sample: React.FC<props> = () => {
   return (
     <div className="midground">
       <div className="foreground column centered">
-        <a 
-            className="fixed bottom-0 text-pink-600 mb-2 p-2 underline cursor-pointer select-none"
-            href="/"
+        {/*@ts-ignore*/}
+        <Link 
+            className="fixed bottom-0 text-pink-600 p-2 underline cursor-pointer select-none"
+            to="/"
         >
             {"< Go Back"}
-        </a>
+        </Link>
 
         <div className="letterDisplayViewAll centered column">
         { letter?.letter }

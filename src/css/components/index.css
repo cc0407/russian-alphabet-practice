@@ -3,8 +3,8 @@
 @screen 500  {.foreground           { @apply w-3/4 }}
 
 .letterDisplay                      { @apply text-32 h-64 bg-main text-white rounded-2 w-full }
-@screen 400  {.letterDisplay        { @apply text-44 h-104 }}
-@screen 640  {.letterDisplay        { @apply text-56 }}
+@screen 400  {.letterDisplay        { @apply text-44 h-72 }}
+@screen 640  {.letterDisplay        { @apply text-56 h-104}}
 
 .rightButton                        { @apply mx-auto mt-2 }
 @screen 640  {.rightButton          { @apply ml-5 mr-0 mt-0 }}
