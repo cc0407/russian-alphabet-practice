@@ -101,5 +101,5 @@ module.exports = {
   ],
   
   //Change REPONAME to the name of this repo. Necessary for gh-pages to function
-  pathPrefix: "/cyrillic-test",
+  pathPrefix: "/russian-alphabet-practice",
 };
