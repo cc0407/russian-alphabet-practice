@@ -1,4 +1,4 @@
-import { Link } from "gatsby";
+import { Link, withPrefix } from "gatsby";
 import React, { useEffect, useState } from "react";
 import Head from "../components/Head";
 
@@ -27,7 +27,7 @@ const defaultProps: Partial<props> = {};
 
 const Sample: React.FC<props> = () => {
 
-  const [letter, setLetter] = useState<dictEntry>();
+  const [letter, setLetter] = useState<dictEntry>(letterDict[0]);
   const [playAudio, setPlayAudio] = useState(false);
 
   return (
@@ -45,7 +45,7 @@ const Sample: React.FC<props> = () => {
         { letter?.letter }
         {playAudio // Plays audio if playAudio is set to true, sets it to false once finished playing
         ? <audio autoPlay={true} className="h-12 text-8 my-4" onEnded={() => {setPlayAudio(false);}}>
-            <source src={letter?.filename} type="audio/mpeg"/>
+            <source src={withPrefix(letter.filename)} type="audio/mpeg"/>
           </audio>
         : ''}
         </div>

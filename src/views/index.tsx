@@ -1,4 +1,4 @@
-import { Link } from "gatsby";
+import { Link, withPrefix } from "gatsby";
 import React, { useState } from "react";
 import Head from "../components/Head";
 
@@ -57,7 +57,7 @@ const Sample: React.FC<props> = () => {
 
         {playAudio // Plays audio if playAudio is set to true, sets it to false once finished playing
         ? <audio autoPlay={true} className="h-12 text-8 my-4" onEnded={() => {setPlayAudio(false);}}>
-            <source src={letter.filename} type="audio/mpeg"/>
+            <source src={withPrefix(letter.filename)} type="audio/mpeg"/>
           </audio>
         : ''}
         

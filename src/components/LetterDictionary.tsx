@@ -3,7 +3,7 @@ export interface dictEntry {
     filename: string,
 }
 
-const prepend = "audio/";
+const prepend = "/audio/";
 const append = ".mp3";
 
 export const letterDict:dictEntry[] = [
