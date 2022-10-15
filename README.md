@@ -13,4 +13,4 @@ Links
 #### [View full portfolio][website]
 
 [website]: https://christiancatalano.ca
-[live]: https://christiancatalano.ca/russian-letter-practice
+[live]: https://christiancatalano.ca/russian-alphabet-practice
