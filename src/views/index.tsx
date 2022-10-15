@@ -45,8 +45,8 @@ const Sample: React.FC<props> = () => {
 
   console.log(dictionary);
   return (
-    <div className="midGround">
-      <div className="column centered h-full w-5/6 400:w-3/4 max-w-[550px] mx-auto">
+    <div className="midground">
+      <div className="foreground column centered">
         <div className="letterDisplay centered">
           {letter.letter}
         </div>
@@ -58,16 +58,13 @@ const Sample: React.FC<props> = () => {
           </audio>
         : ''}
         
-        <div className="flex flex-col 640:flex-row justify-between mt-12 w-full">
-          <div className={(playAudio ? `playingButton` : `button leftButton`)} onClick={() => {setPlayAudio(true);}}>
+        <div className="buttonWrapper">
+          <div className={'button leftButton ' + (playAudio ? `` : `activeButton`)} onClick={() => {setPlayAudio(true);}}>
             { !playAudio ? "Play Sound" : "Playing..." }
           </div>
-          {playAudio 
-            ? '' 
-            : <div className="button rightButton" onClick={() => {setLetter(getRandomLetter(dictionary));}}>
-                Next Letter
-              </div>
-          }
+          <div className={"button rightButton activeButton " + (playAudio ? 'invisible' : '')} onClick={() => {setLetter(getRandomLetter(dictionary));}}>
+            Next Letter
+          </div>
         </div>
       </div>
       

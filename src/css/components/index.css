@@ -1,25 +1,22 @@
-.midGround                   { @apply w-full max-w-224 h-screen bg-white overflow-hidden }
-
-.sampleSpacing { @apply mt-12 }
-@screen 640  {.sampleSpacing     { @apply mt-16 }}
+.midground                      { @apply w-full max-w-224 h-screen bg-white overflow-hidden }
+.foreground                     { @apply w-5/6 h-full max-w-[550px] mx-auto }
+@screen 500  {.foreground       { @apply w-3/4 }}
 
 .letterDisplay                  { @apply text-32 h-64 flex bg-main text-white rounded-2 w-full }
 @screen 400  {.letterDisplay    { @apply text-44 h-104 }}
 @screen 640  {.letterDisplay    { @apply text-56 }}
 
-.button                         { @apply flex-grow-default w-full text-center text-8 bg-darkBlue px-6 py-4 rounded-4 text-offWhite cursor-pointer select-none }
-@screen 640  {.button           { @apply w-64 py-2 }}
-@screen 768  {.button           { @apply text-10 }}
-
-.rightButton                     { @apply mx-auto mt-2 }
-@screen 640  {.rightButton       { @apply ml-2 mr-0 mt-0 }}
-@screen 768  {.rightButton       { @apply ml-5 }}
+.rightButton                    { @apply mx-auto mt-2 }
+@screen 640  {.rightButton      { @apply ml-5 mr-0 mt-0 }}
 
 .leftButton                     { @apply mx-auto mb-2 }
-@screen 640  {.leftButton       { @apply mr-2 ml-0 mb-0 }}
-@screen 768  {.leftButton       { @apply mr-5 }}
+@screen 640  {.leftButton       { @apply mr-5 ml-0 mb-0 }}
 
-.button:hover                   { @apply bg-darkBlue2 bg-opacity-90 text-white }
-.button:active                  { @apply bg-opacity-80 text-white }
+.button                         { @apply h-20 flex-grow-default w-full flex justify-center items-center text-8 bg-darkBlue px-6 py-4 rounded-4 text-offWhite select-none }
+@screen 640  {.button           { @apply w-64 py-2 }}
 
-.playingButton                  { @apply w-64 text-center text-10 bg-darkBlue px-6 py-2 rounded-4 text-offWhite cursor-default select-none}
+.activeButton                   { @apply cursor-pointer }
+.activeButton:hover             { @apply bg-darkBlue2 bg-opacity-90 text-white }
+.activeButton:active            { @apply bg-opacity-80 text-white }
+
+.buttonWrapper                  { @apply flex flex-col 640:flex-row justify-between mt-12 w-full }
