@@ -1,18 +1,24 @@
-.sampleContent                   { @apply z-10 leading-normal text-lg px-4 mb-12 break-words font-bold }
-@screen 360  {.sampleContent     { @apply text-xl w-84 px-0 }}
-@screen 500  {.sampleContent     { @apply text-xl w-104 }}
-@screen 640  {.sampleContent     { @apply text-2xl w-128 mb-16 }}
-@screen 800  {.sampleContent     { @apply w-[44rem] }}
-@screen 1024 {.sampleContent     { @apply w-192 leading-relaxed }}
+.midGround                   { @apply w-full max-w-224 h-screen bg-white overflow-hidden }
 
 .sampleSpacing { @apply mt-12 }
 @screen 640  {.sampleSpacing     { @apply mt-16 }}
 
+.letterDisplay                  { @apply text-32 h-64 flex bg-main text-white rounded-2 w-full }
+@screen 400  {.letterDisplay    { @apply text-44 h-104 }}
+@screen 640  {.letterDisplay    { @apply text-56 }}
 
-.sampleTextLink                { @apply underline whitespace-nowrap }
-.sampleTextLink:hover          { @apply text-white bg-lightBlue rounded-1 no-underline }
+.button                         { @apply flex-grow-default w-full text-center text-8 bg-darkBlue px-6 py-4 rounded-4 text-offWhite cursor-pointer select-none }
+@screen 640  {.button           { @apply w-64 py-2 }}
+@screen 768  {.button           { @apply text-10 }}
 
-.button                         { @apply w-64 text-center text-10 bg-darkBlue px-6 py-2 rounded-4 text-offWhite cursor-pointer select-none }
+.rightButton                     { @apply mx-auto mt-2 }
+@screen 640  {.rightButton       { @apply ml-2 mr-0 mt-0 }}
+@screen 768  {.rightButton       { @apply ml-5 }}
+
+.leftButton                     { @apply mx-auto mb-2 }
+@screen 640  {.leftButton       { @apply mr-2 ml-0 mb-0 }}
+@screen 768  {.leftButton       { @apply mr-5 }}
+
 .button:hover                   { @apply bg-darkBlue2 bg-opacity-90 text-white }
 .button:active                  { @apply bg-opacity-80 text-white }
 

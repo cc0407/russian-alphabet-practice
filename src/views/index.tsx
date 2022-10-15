@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Head from "../components/Head";
+import RoundedLink from "../components/RoundedLink"
 // @ts-ignore
 import bruh from "../audio/Bruh.mp3" ;
 // @ts-ignore
@@ -38,9 +39,9 @@ const Sample: React.FC<props> = () => {
   const [playAudio, setPlayAudio] = useState(false);
 
   return (
-    <div className="w-3/4 h-screen bg-white overflow-hidden">
-      <div className="column centered h-full w-3/4 max-w-[550px] mx-auto">
-        <div className="text-56 h-108 flex centered bg-main text-white rounded-2 w-full">
+    <div className="midGround">
+      <div className="column centered h-full w-5/6 400:w-3/4 max-w-[550px] mx-auto">
+        <div className="letterDisplay centered">
           {letter.letter}
         </div>
 
@@ -50,13 +51,13 @@ const Sample: React.FC<props> = () => {
           </audio>
         : ''}
         
-        <div className="row justify-between my-12 w-full">
-          <div className={`flex-grow-default ` + (playAudio ? `playingButton` : `button`)} onClick={() => {setPlayAudio(true);}}>
+        <div className="flex flex-col 640:flex-row justify-between mt-12 w-full">
+          <div className={(playAudio ? `playingButton` : `button leftButton`)} onClick={() => {setPlayAudio(true);}}>
             { !playAudio ? "Play Sound" : "Playing..." }
           </div>
           {playAudio 
             ? '' 
-            : <div className="button ml-8" onClick={() => {setLetter(getRandomLetter);}}>
+            : <div className="button rightButton" onClick={() => {setLetter(getRandomLetter);}}>
                 Next Letter
               </div>
           }
@@ -99,9 +100,9 @@ const dictionary:dictEntry[] = [
     {letter:'Чч', sound:bruh},
     {letter:'Шш', sound:bruh},
     {letter:'Щщ', sound:bruh},
-    {letter:'Ъъ', sound:bruh},
+    {letter:'Ъъ', sound:bruh}, // NOSOUND SOFT MODIFIER
     {letter:'Ыы', sound:bruh},
-    {letter:'Ьь', sound:bruh},
+    {letter:'Ьь', sound:bruh}, // NOSOUND HARD MODIFIER
     {letter:'Ээ', sound:bruh},
     {letter:'Юю', sound:bruh},
     {letter:'Яя', sound:bruh},
