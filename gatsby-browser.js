@@ -16,6 +16,7 @@ require("./src/css/components/main.css");
 require("./src/css/components/nav.css");
 require("./src/css/components/util.css");
 /*------- More CSS files go here --------*/
+require("./src/css/components/view-all.css");
 /*---------------------------------------*/
 
 

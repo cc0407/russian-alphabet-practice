@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import Head from "../components/Head";
 
-import { dictEntry, dictNoSound } from "../components/LetterDictionary";
-import { graphql, useStaticQuery } from "gatsby";
+import { dictEntry, letterDict } from "../components/LetterDictionary";
 
 
 // This is a high-level view of what the page will be
@@ -22,9 +21,9 @@ export const SamplePage = () => {
 const getRandomLetter = (currentLetter:string) => {
   var nextLetter;
   do {
-  const length = dictNoSound.length;
-  const randomIndex = Math.floor(Math.random() * length);
-  nextLetter = dictNoSound[randomIndex];
+    const length = letterDict.length;
+    const randomIndex = Math.floor(Math.random() * length);
+    nextLetter = letterDict[randomIndex];
   } while(nextLetter.letter == currentLetter);
   return nextLetter;
 }
@@ -44,13 +43,19 @@ const Sample: React.FC<props> = () => {
   return (
     <div className="midground">
       <div className="foreground column centered">
-        <div className="letterDisplay centered">
+        <a 
+          className="fixed bottom-0 text-pink-600 mb-2 p-2 underline cursor-pointer select-none"
+          href="/view-all"
+        >
+          View Dictionary
+        </a>
+        <div className="letterDisplay column centered">
           {letter.letter}
         </div>
 
         {playAudio // Plays audio if playAudio is set to true, sets it to false once finished playing
         ? <audio autoPlay={true} className="h-12 text-8 my-4" onEnded={() => {setPlayAudio(false);}}>
-            <source src={"audio/" + letter.filename + ".mp3"} type="audio/mpeg"/>
+            <source src={letter.filename} type="audio/mpeg"/>
           </audio>
         : ''}
         
